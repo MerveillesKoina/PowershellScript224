@@ -1,0 +1,1 @@
+﻿## Remember to select PowerShell >> Run as Administrator (esp on Win10 machine)# highlight ALL the lines below and run it together#$pingParameters = @{	Name        = "AllowPing"	DisplayName = "Allow Ping"	Protocol    = "ICMPv4"	IcmpType    = 8	Action      = "Allow"	Profile     = "Any"	Enabled     = "True"}New-NetFirewallRule @pingParameters 

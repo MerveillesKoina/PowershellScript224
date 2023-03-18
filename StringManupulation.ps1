@@ -1,0 +1,3 @@
+﻿# Write a script which explore the string manipulation operator
+
+# Defining variable called originalText$originalString = "I like to procrastinate"# Define a variable called userChangedWord asking to replace the word procrastinate$userWord = Read-Host("What word would you like to use?")#Define a variable called replaceWord$replaceString =$originalString.Replace("procrastinate","$userWord")#Dispalying the replacing sentenceWrite-Host("$replaceString")
