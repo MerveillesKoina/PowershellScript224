@@ -45,13 +45,14 @@ New-SmbShare @SmbCreation
 function Get-UserInfo{
     
     param(
-        [Parameter(Mandotary = $true)]
+        [Parameter(Mandatory = $true)]
         [string]$username
     )
 
     # Using the try/catch block
     try{
-        $user = Get-ADUser -Identity $username -Properties Name, SamAccountName, DistinguishedName -ErrorAction Stop
+        $user = Get-ADUser -Identity $username -Properties Name, SamAccountName, 
+        DistinguishedName -ErrorAction Stop
 
         $mytable = New-Object -TypeName PSObject -Property @{
         "Name" = $user.Name
